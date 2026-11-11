@@ -1,9 +1,6 @@
-import FeatureScreen from '../components/FeatureScreen';
-
-export default function Schedule() {
-  return <FeatureScreen title="Class Schedule" subtitle="Stay organized all semester" icon="book-outline" items={[
-    { title: 'My Classes', description: 'Your class schedule will appear here after an authorized student data connection is added.', icon: 'calendar-number-outline' },
-    { title: 'Weekly Overview', description: 'A future version could show each class by day, time, and building.', icon: 'time-outline' },
-    { title: 'Privacy First', description: 'This prototype does not collect school passwords or access student records.', icon: 'lock-closed-outline' },
-  ]} />;
-}
+import OfficialScreen from '../components/OfficialScreen';
+export default function Schedule() { return <OfficialScreen title="Class Schedule" subtitle="Academics and registration" icon="book-outline" entries={[
+{title:'Your Personal Schedule',description:'Your actual registered courses are private. Sign in through the college’s official student systems to view your schedule. This independent app does not access your records.',url:'https://www.farmingdale.edu/new-website/index.shtml',linkLabel:'Find myFSC sign-in',icon:'lock-closed-outline'},
+{title:'Registrar',description:'Find help with registration, academic records, transcripts and course scheduling.',url:'https://www.farmingdale.edu/registrar/',linkLabel:'Visit the Registrar',icon:'school-outline'},
+{title:'Academic Calendar',description:'Check official semester dates and academic deadlines. Always verify dates before making plans.',url:'https://www.farmingdale.edu/calendar/academic/',linkLabel:'View academic calendar',icon:'calendar-number-outline'}
+]} note="Personal schedules are not synced. Never enter your FSC password into this student-created app." />; }
