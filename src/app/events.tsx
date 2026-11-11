@@ -1,9 +1,6 @@
-import FeatureScreen from '../components/FeatureScreen';
-
-export default function Events() {
-  return <FeatureScreen title="Events & Clubs" subtitle="Find your campus community" icon="calendar-outline" items={[
-    { title: 'Discover Clubs', description: 'Explore student organizations and find groups that match your interests.', icon: 'people-outline' },
-    { title: 'Upcoming Events', description: 'Event cards and schedules will be connected to verified campus information in a future release.', icon: 'ticket-outline' },
-    { title: 'Get Involved', description: 'Connect with campus life and student activities. This screen is demonstration content.', icon: 'heart-outline' },
-  ]} />;
-}
+import OfficialScreen from '../components/OfficialScreen';
+export default function Events() { return <OfficialScreen title="Events & Clubs" subtitle="Find your campus community" icon="calendar-outline" entries={[
+{title:'Campus Events',description:'Explore upcoming campus activities, club meetings and opportunities to get involved. Event dates and locations may change.',url:'https://www.farmingdale.edu/student-activities/',linkLabel:'See current events',icon:'calendar-outline'},
+{title:'RamCentral',description:'FSC students can explore organizations, discover events and RSVP through the official student activities system.',url:'https://www.farmingdale.edu/student-activities/gettinginvolved.shtml',linkLabel:'Explore RamCentral information',icon:'people-outline'},
+{title:'Clubs & Organizations',description:'Discover academic, cultural, recreational and special-interest student groups.',url:'https://www.farmingdale.edu/student-activities/',linkLabel:'Find student organizations',icon:'heart-outline'}
+]} />; }
