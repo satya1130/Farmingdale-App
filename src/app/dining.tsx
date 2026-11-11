@@ -1,9 +1,7 @@
-import FeatureScreen from '../components/FeatureScreen';
-
-export default function Dining() {
-  return <FeatureScreen title="Dining & Food" subtitle="Explore campus dining" icon="restaurant-outline" items={[
-    { title: 'Dining Locations', description: 'Find food options around campus. Verified locations and operating hours can be added later.', icon: 'location-outline' },
-    { title: 'Menus', description: 'Menu availability and dietary information require a current verified source.', icon: 'fast-food-outline' },
-    { title: 'Plan a Meal', description: 'Browse the dining section without leaving the app. All information here is placeholder content.', icon: 'cafe-outline' },
-  ]} />;
-}
+import OfficialScreen from '../components/OfficialScreen';
+export default function Dining() { return <OfficialScreen title="Dining & Food" subtitle="Eat on campus" icon="restaurant-outline" entries={[
+{title:'POPs Dining Room',description:'All-you-care-to-eat dining on campus. Meal plan options are available; check current menus and hours before visiting.',url:'https://www.farmingdale.edu/auxiliary-service-corporation/campus-dining.shtml',linkLabel:'Dining information',icon:'restaurant-outline'},
+{title:'Campus Center Food Court',description:'A variety of dining choices in the Campus Center. Offerings and operating hours can change.',url:'https://www.farmingdale.edu/auxiliary-service-corporation/campus-dining.shtml',linkLabel:'See campus dining',icon:'fast-food-outline'},
+{title:'Starbucks & Books n’ Beans',description:'Coffee and café options, including Books n’ Beans in the library.',url:'https://www.farmingdale.edu/auxiliary-service-corporation/campus-dining.shtml',linkLabel:'Find locations and hours',icon:'cafe-outline'},
+{title:'Menus, Allergens & Meal Plans',description:'Use the dining provider’s current information for menus, dietary questions, meal plans and hours. Do not rely on old schedules.',url:'https://www.campusdish.com/en-us/CSE/Farmingdale',linkLabel:'Check CampusDish',icon:'nutrition-outline'}
+]} />; }
