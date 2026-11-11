@@ -41,3 +41,35 @@ A working Node/Expo installation and an iOS or Android device are needed for com
 ## Responsible use and AI disclosure
 
 The code scaffold, demo screens, route logic and this documentation were drafted with assistance from OpenAI ChatGPT on November 11, 2026. The project owner should review generated code, verify any campus-facing information and perform device testing before submission or public release. Avoid collecting school passwords or claiming official affiliation.
+
+
+## Official Farmingdale information (proposed update)
+
+The eight feature screens now show useful, source-linked public campus information in native React Native cards:
+
+- Campus Map: interactive map, visitor directions, shuttle
+- Events & Clubs: student activities, RamCentral information
+- Class Schedule: Registrar and academic calendar; personal schedule requires official login
+- Dining & Food: POPs, Campus Center, cafes and CampusDish
+- Announcements: college homepage, campus calendar and academic dates
+- Student Resources: tutoring, registrar, activities, careers, directory
+- Student Profile: guest mode and official myFSC access; no credentials collected
+- Campus Overview: shortcuts to key official resources
+
+Sources are primarily public pages at https://www.farmingdale.edu/ and https://map.farmingdale.edu/. Information is a general guide, not a live API feed. Buttons open the relevant official source for the latest details. No private college systems, personal records, push alerts, or authenticated data integrations are implemented. The app is independent and not an official college application.
+
+### Test the proposed changes
+
+After reviewing and merging the PR, from your existing cloned repository run:
+
+```powershell
+git pull origin main
+npm.cmd install
+npx.cmd expo start --clear
+```
+
+Open the app in Expo Go and test each of the eight feature screens and source links. The code has not yet been validated on a device.
+
+### AI use for this update
+
+AI assistance was used to draft the native information cards, screen content and official resource links. The developer must verify links, current campus details, TypeScript compilation and Expo Go behavior before relying on this build.
