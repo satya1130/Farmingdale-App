@@ -1,0 +1,19 @@
+{
+  "expo": {
+    "name": "Central Farmingdale",
+    "slug": "central-farmingdale",
+    "scheme": "centralfarmingdale",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "plugins": [
+      "expo-router"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
