@@ -1,9 +1,6 @@
-import FeatureScreen from '../components/FeatureScreen';
-
-export default function Profile() {
-  return <FeatureScreen title="Student Profile" subtitle="Your personal campus hub" icon="person-circle-outline" items={[
-    { title: 'Guest Mode', description: 'You are exploring the Central Farmingdale demo. No sign-in is required.', icon: 'person-outline' },
-    { title: 'Account Features', description: 'Profile data, saved preferences, and school account integrations are not enabled yet.', icon: 'settings-outline' },
-    { title: 'Your Privacy', description: 'The demo does not request student identification numbers or passwords.', icon: 'shield-checkmark-outline' },
-  ]} />;
-}
+import OfficialScreen from '../components/OfficialScreen';
+export default function Profile() { return <OfficialScreen title="Student Profile" subtitle="Private account access" icon="person-circle-outline" entries={[
+{title:'Guest Mode',description:'You are using a student-created prototype. No college account is connected, and no student data is stored.',icon:'person-outline'},
+{title:'Official myFSC',description:'For personalized college information, use the official myFSC sign-in through Farmingdale’s website.',url:'https://www.farmingdale.edu/new-website/index.shtml',linkLabel:'Find official myFSC access',icon:'log-in-outline'},
+{title:'Privacy & Security',description:'This app does not collect passwords, student ID numbers, grades or private schedules. Any future account integration needs explicit authorization and secure sign-in.',icon:'shield-checkmark-outline'}
+]} />; }
