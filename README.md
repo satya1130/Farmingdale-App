@@ -73,3 +73,32 @@ Open the app in Expo Go and test each of the eight feature screens and source li
 ### AI use for this update
 
 AI assistance was used to draft the native information cards, screen content and official resource links. The developer must verify links, current campus details, TypeScript compilation and Expo Go behavior before relying on this build.
+
+
+## Expo Go SDK 58 compatibility
+
+This project targets **Expo SDK 58** (React 19.3 and React Native 0.88), matching the current iOS Expo Go major SDK. The SDK 54 package versions previously caused an "incompatible version of Expo Go" error. Node.js 22.13+ is required; use a supported Node LTS version where possible.
+
+After this PR is merged, update your **existing clone** in PowerShell:
+
+```powershell
+git pull origin main
+npm.cmd install
+npx.cmd expo install --fix
+npx.cmd expo-doctor
+npm.cmd run typecheck
+npx.cmd expo start --clear
+```
+
+If your local install was interrupted and `npm ls expo react --depth=0` reports invalid versions, stop Expo, then clean the install and retry:
+
+```powershell
+Remove-Item -Recurse -Force node_modules
+Remove-Item -Force package-lock.json -ErrorAction SilentlyContinue
+npm.cmd install
+npx.cmd expo install --fix
+```
+
+Do **not** use `--force` or `--legacy-peer-deps` to bypass peer dependency errors. Do not commit `node_modules`. Commit the regenerated `package-lock.json` only after successful installation.
+
+This upgrade is proposed for testing; it has not yet been verified on the user's iPhone or by a complete dependency install.
