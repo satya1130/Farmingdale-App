@@ -11,6 +11,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" />
         <Stack.Screen name="map" />
         <Stack.Screen name="events" />
+        <Stack.Screen name="email" />
         <Stack.Screen name="schedule" />
         <Stack.Screen name="courses" />
         <Stack.Screen name="deadlines" />
