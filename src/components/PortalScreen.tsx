@@ -1,6 +1,7 @@
 import { Ionicons } from '@expo/vector-icons';
 import { router } from 'expo-router';
 import { useState } from 'react';
+import type { ReactNode } from 'react';
 import { Linking, ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 type Page = 'index' | 'courses' | 'schedule' | 'deadlines' | 'email' | 'events' | 'dining' | 'map' | 'resources';
@@ -69,8 +70,8 @@ const resourceGroups = [
   ] },
 ];
 function go(key: Page) { router.push((key === 'index' ? '/' : '/' + key) as never); }
-function Card({children,style}:{children:React.ReactNode;style?:object}) { return <View style={[s.card,style]}>{children}</View>; }
-function Heading({children,caption}:{children:React.ReactNode;caption?:string}) { return <View style={{marginBottom:20}}>{caption ? <Text style={s.eyebrow}>{caption}</Text>:null}<Text style={s.pageTitle}>{children}</Text></View>; }
+function Card({children,style}:{children:ReactNode;style?:object}) { return <View style={[s.card,style]}>{children}</View>; }
+function Heading({children,caption}:{children:ReactNode;caption?:string}) { return <View style={{marginBottom:20}}>{caption ? <Text style={s.eyebrow}>{caption}</Text>:null}<Text style={s.pageTitle}>{children}</Text></View>; }
 function Pill({label,active,onPress}:{label:string;active?:boolean;onPress:()=>void}) { return <TouchableOpacity accessibilityRole="button" accessibilityState={{selected:!!active}} onPress={onPress} style={[s.pill,active&&s.pillActive]}><Text style={[s.pillText,active&&{color:'#fff'}]}>{label}</Text></TouchableOpacity>; }
 function SectionTitle({children,right,onPress}:{children:string;right?:string;onPress?:()=>void}) { return <View style={s.sectionHeader}><Text style={s.sectionTitle}>{children}</Text>{right?<TouchableOpacity onPress={onPress}><Text style={{color:accent,fontWeight:'700'}}>{right}</Text></TouchableOpacity>:null}</View>; }
 function SampleNote() { return <Text style={s.note}>DESIGN PREVIEW · Sample information only. No student records, email, live events, or dining feeds are connected.</Text>; }
