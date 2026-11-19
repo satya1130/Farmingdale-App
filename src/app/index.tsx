@@ -4,9 +4,9 @@ import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'react-nati
 import { theme } from '../constants/theme';
 
 const links = [
-  { title: 'Courses & Grades', icon: 'school-outline', path: '/schedule' },
+  { title: 'Courses & Grades', icon: 'school-outline', path: '/courses' },
   { title: 'Weekly Schedule', icon: 'calendar-outline', path: '/schedule' },
-  { title: 'Upcoming Deadlines', icon: 'time-outline', path: '/announcements' },
+  { title: 'Upcoming Deadlines', icon: 'time-outline', path: '/deadlines' },
   { title: 'Email', icon: 'mail-outline', path: '/resources' },
   { title: 'Club Events', icon: 'people-outline', path: '/events' },
   { title: 'Dining', icon: 'restaurant-outline', path: '/dining' },
@@ -75,7 +75,7 @@ export default function HomeScreen() {
         <View style={styles.panel}>
           <Text style={styles.sectionTitle}>Upcoming assignments</Text>
           <Text style={styles.empty}>Your assignments will appear here once an authorized academic data source is connected.</Text>
-          <OpenLink title="Academic dates and announcements" path="/announcements" icon="calendar-outline" />
+          <OpenLink title="My assignment checklist" path="/deadlines" icon="calendar-outline" />
         </View>
         <View style={styles.panel}>
           <Text style={styles.sectionTitle}>Today's classes</Text>
