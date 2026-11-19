@@ -1,6 +1,2 @@
-import OfficialScreen from '../components/OfficialScreen';
-export default function Events() { return <OfficialScreen title="Events & Clubs" subtitle="Find your campus community" icon="calendar-outline" entries={[
-{title:'Campus Events',description:'Explore upcoming campus activities, club meetings and opportunities to get involved. Event dates and locations may change.',url:'https://www.farmingdale.edu/student-activities/',linkLabel:'See current events',icon:'calendar-outline'},
-{title:'RamCentral',description:'FSC students can explore organizations, discover events and RSVP through the official student activities system.',url:'https://www.farmingdale.edu/student-activities/gettinginvolved.shtml',linkLabel:'Explore RamCentral information',icon:'people-outline'},
-{title:'Clubs & Organizations',description:'Discover academic, cultural, recreational and special-interest student groups.',url:'https://www.farmingdale.edu/student-activities/',linkLabel:'Find student organizations',icon:'heart-outline'}
-]} />; }
+import PortalScreen from '../components/PortalScreen';
+export default function Screen() { return <PortalScreen page="events" />; }
