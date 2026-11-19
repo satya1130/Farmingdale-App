@@ -1,6 +1,2 @@
-import OfficialScreen from '../components/OfficialScreen';
-export default function CampusMap() { return <OfficialScreen title="Campus Map" subtitle="Explore Farmingdale State College" icon="map-outline" entries={[
-{title:'Interactive Campus Map',description:'Find academic buildings, parking and campus destinations using Farmingdale’s official interactive map.',url:'https://map.farmingdale.edu/',linkLabel:'Open interactive map',icon:'navigate-outline'},
-{title:'Campus Directions & Parking',description:'Find visitor guidance and directions before traveling to campus.',url:'https://www.farmingdale.edu/visitors/index.shtml',linkLabel:'Visitor information',icon:'car-outline'},
-{title:'Campus Shuttle',description:'FSC lists a free weekday campus shuttle connecting campus, the Farmingdale LIRR station and the Aviation Center. Confirm the current schedule before traveling.',url:'https://www.farmingdale.edu/visitors/index.shtml',linkLabel:'Shuttle information',icon:'bus-outline'}
-]} note="Building information is provided here as a guide. The interactive map opens the official FSC website for accurate navigation." />; }
+import PortalScreen from '../components/PortalScreen';
+export default function Screen() { return <PortalScreen page="map" />; }
