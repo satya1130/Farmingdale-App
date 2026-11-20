@@ -15,13 +15,22 @@ export type StudentClass = {
   time: string;
   room: string;
 };
+export type StudentCourse = {
+  id: string;
+  code: string;
+  name: string;
+  professor: string;
+  credits: number;
+  grade: string;
+};
 const STORAGE_KEY = 'central-farmingdale:student-planner:v1';
-const INITIAL_DATA = { tasks: [] as StudentTask[], classes: [] as StudentClass[], savedEvents: [] as string[] };
+const INITIAL_DATA = { tasks: [] as StudentTask[], classes: [] as StudentClass[], savedEvents: [] as string[], courses: [] as StudentCourse[] };
 
 export function useStudentPlanner() {
   const [tasks, setTasks] = useState<StudentTask[]>([]);
   const [classes, setClasses] = useState<StudentClass[]>([]);
   const [savedEvents, setSavedEvents] = useState<string[]>([]);
+  const [courses, setCourses] = useState<StudentCourse[]>([]);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -36,6 +45,7 @@ export function useStudentPlanner() {
             if (Array.isArray(data.tasks)) setTasks(data.tasks);
             if (Array.isArray(data.classes)) setClasses(data.classes);
             if (Array.isArray(data.savedEvents)) setSavedEvents(data.savedEvents);
+            if (Array.isArray(data.courses)) setCourses(data.courses);
           }
         } catch (error) {
           console.warn('Could not read locally saved planner data', error);
@@ -48,9 +58,9 @@ export function useStudentPlanner() {
 
   useEffect(() => {
     if (!ready) return;
-    AsyncStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, classes, savedEvents }))
+    AsyncStorage.setItem(STORAGE_KEY, JSON.stringify({ tasks, classes, savedEvents, courses }))
       .catch(error => console.warn('Could not save planner', error));
-  }, [ready, tasks, classes, savedEvents]);
+  }, [ready, tasks, classes, savedEvents, courses]);
 
-  return { tasks, setTasks, classes, setClasses, savedEvents, setSavedEvents, ready };
+  return { tasks, setTasks, classes, setClasses, savedEvents, setSavedEvents, courses, setCourses, ready };
 }
