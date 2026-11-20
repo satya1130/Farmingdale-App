@@ -113,7 +113,7 @@ export default function PortalScreen({page}:{page:Page}) {
   const dueToday=pending.filter(t=>t.dueDate===todayKey);
   const dueWeek=pending.filter(t=>t.dueDate>=todayKey&&t.dueDate<=thisWeekKey);
   const timeMinutes=(value:string)=>{
-    const match=value.match(/^(\\d{1,2}):(\\d{2})\\s*(AM|PM)$/i);
+    const match=value.match(/^(\d{1,2}):(\d{2})\s*(AM|PM)$/i);
     if(!match)return -1;
     return (Number(match[1])%12+(match[3].toUpperCase()==='PM'?12:0))*60+Number(match[2]);
   };
