@@ -112,7 +112,7 @@ export default function PortalScreen({page}:{page:Page}) {
   const todayClasses=myClasses.filter(c=>c.day===weekday).sort((a,b)=>a.time.localeCompare(b.time));
   const addTask=()=>{
     const title=taskTitle.trim(),dueDate=taskDue.trim(),course=taskCourse.trim();
-    if(!title||!/^\\d{4}-\\d{2}-\\d{2}$/.test(dueDate))return;
+    if(!title||!/^\d{4}-\d{2}-\d{2}$/.test(dueDate))return;
     const parsed=new Date(dueDate+'T12:00:00');
     if(Number.isNaN(parsed.getTime())||dateKey(parsed)!==dueDate)return;
     setTasks(p=>[...p,{id:String(Date.now())+'-'+Math.random().toString(36).slice(2),title,course,dueDate,done:false}]);
