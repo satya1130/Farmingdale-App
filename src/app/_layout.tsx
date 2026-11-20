@@ -13,6 +13,8 @@ export default function RootLayout() {
         <Stack.Screen name="events" />
         <Stack.Screen name="email" />
         <Stack.Screen name="schedule" />
+        <Stack.Screen name="calendar" />
+        <Stack.Screen name="services" />
         <Stack.Screen name="courses" />
         <Stack.Screen name="deadlines" />
         <Stack.Screen name="dining" />
